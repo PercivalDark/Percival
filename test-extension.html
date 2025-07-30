@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe Stock Analyzer - Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .step {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #c3e6cb;
+        }
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ffeaa7;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #f5c6cb;
+        }
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Adobe Stock Analyzer</h1>
+        <p>Complete setup and testing guide for your fresh Adobe Stock Analyzer project</p>
+    </div>
+
+    <div class="section">
+        <h2>📋 Project Overview</h2>
+        <p>You've successfully created a comprehensive Adobe Stock Analyzer with:</p>
+        <ul>
+            <li><strong>Chrome Extension</strong> - Modern UI with tabbed interface</li>
+            <li><strong>Node.js Backend</strong> - Express server with Puppeteer scraping</li>
+            <li><strong>Python Analysis</strong> - Advanced data processing and insights</li>
+            <li><strong>Railway Deployment</strong> - Production-ready configuration</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ Setup Instructions</h2>
+        
+        <div class="step">
+            <h3>Step 1: Install Dependencies</h3>
+            <div class="code">
+cd adobe-stock-analyzer-fresh
+npm run setup
+            </div>
+            <p>This will install both Node.js and Python dependencies.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 2: Start the Backend Server</h3>
+            <div class="code">
+npm run dev
+            </div>
+            <p>Server will start at <code>http://localhost:3000</code></p>
+        </div>
+
+        <div class="step">
+            <h3>Step 3: Install Chrome Extension</h3>
+            <ol>
+                <li>Open Chrome and go to <code>chrome://extensions/</code></li>
+                <li>Enable "Developer mode" (top right toggle)</li>
+                <li>Click "Load unpacked" and select the <code>extension</code> folder</li>
+                <li>The extension icon will appear in your toolbar</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>Step 4: Configure Extension Settings</h3>
+            <ol>
+                <li>Click the extension icon</li>
+                <li>Click "Settings" button</li>
+                <li>Enter backend URL: <code>http://localhost:3000</code></li>
+                <li>Enable "Use Backend API for Analysis"</li>
+                <li>Save settings</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🧪 Testing</h2>
+        
+        <div class="step">
+            <h3>Test Backend Server</h3>
+            <p>Click the button below to test if your backend server is running:</p>
+            <button class="btn" onclick="testBackend()">Test Backend Health</button>
+            <div id="backend-result" style="margin-top: 10px;"></div>
+        </div>
+
+        <div class="step">
+            <h3>Test Extension</h3>
+            <ol>
+                <li>Navigate to any Adobe Stock contributor page (e.g., <a href="https://stock.adobe.com/contributor/203660555/Looker_Studio" target="_blank">this example</a>)</li>
+                <li>Click your extension icon</li>
+                <li>Click "Analyze Current Page" or enter contributor info manually</li>
+                <li>View the comprehensive analysis results</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>Test Python Analysis</h3>
+            <div class="code">
+cd server
+echo '{"scrapedData": {"contributorName": "Test User", "totalItems": 500, "assetTitles": ["business meeting", "technology concept", "nature landscape"]}, "contributorInfo": {"name": "Test"}}' | python analyze.py
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🌐 Railway Deployment</h2>
+        
+        <div class="step">
+            <h3>Deploy to Railway</h3>
+            <ol>
+                <li>Push your code to GitHub</li>
+                <li>Connect your GitHub repo to <a href="https://railway.app" target="_blank">Railway</a></li>
+                <li>Railway will automatically detect the Procfile and deploy</li>
+                <li>Update your extension settings with the Railway URL</li>
+            </ol>
+        </div>
+
+        <div class="success">
+            <strong>✅ Production Ready:</strong> Your project is configured for Railway deployment with proper Procfile, package.json, and environment setup.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📊 Features Overview</h2>
+        
+        <div class="step">
+            <h3>Chrome Extension Features</h3>
+            <ul>
+                <li>Modern tabbed interface (Overview, Analytics, Keywords, Insights)</li>
+                <li>Real-time progress tracking</li>
+                <li>Multiple input methods (URL, ID, username)</li>
+                <li>Export functionality (JSON, CSV, clipboard)</li>
+                <li>Settings management</li>
+                <li>Offline fallback capability</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>Backend API Features</h3>
+            <ul>
+                <li>Puppeteer-powered web scraping</li>
+                <li>Python integration for advanced analysis</li>
+                <li>RESTful API endpoints</li>
+                <li>Rate limiting and security</li>
+                <li>CORS support for Chrome extensions</li>
+                <li>Comprehensive error handling</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>Python Analysis Features</h3>
+            <ul>
+                <li>Advanced keyword extraction and analysis</li>
+                <li>Portfolio scoring (0-100)</li>
+                <li>Category classification</li>
+                <li>Market insights and opportunities</li>
+                <li>Trend detection</li>
+                <li>Performance metrics calculation</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🔗 Quick Links</h2>
+        <a href="http://localhost:3000" class="btn" target="_blank">Backend Server</a>
+        <a href="http://localhost:3000/api/health" class="btn" target="_blank">Health Check</a>
+        <a href="http://localhost:3000/api/test" class="btn" target="_blank">API Test</a>
+        <a href="chrome://extensions/" class="btn" target="_blank">Chrome Extensions</a>
+        <a href="https://stock.adobe.com/contributor/203660555/Looker_Studio" class="btn" target="_blank">Test Contributor Page</a>
+    </div>
+
+    <div class="section">
+        <h2>📚 Documentation</h2>
+        <p>For detailed documentation, troubleshooting, and advanced usage, see the <strong>README.md</strong> file in your project directory.</p>
+        
+        <div class="warning">
+            <strong>⚠️ Note:</strong> The extension icons are placeholder files. Replace the files in <code>extension/icons/</code> with actual PNG images (16x16, 48x48, 128x128 pixels) for a complete setup.
+        </div>
+    </div>
+
+    <script>
+        async function testBackend() {
+            const resultDiv = document.getElementById('backend-result');
+            resultDiv.innerHTML = '<div style="color: #666;">Testing backend connection...</div>';
+            
+            try {
+                const response = await fetch('http://localhost:3000/api/health');
+                const data = await response.json();
+                
+                if (response.ok) {
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            <strong>✅ Backend is running!</strong><br>
+                            Status: ${data.status}<br>
+                            Version: ${data.version}<br>
+                            Puppeteer: ${data.services?.puppeteer || 'unknown'}<br>
+                            Python: ${data.services?.python || 'unknown'}
+                        </div>
+                    `;
+                } else {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <strong>❌ Backend connection failed!</strong><br>
+                        Error: ${error.message}<br>
+                        Make sure the server is running: <code>npm run dev</code>
+                    </div>
+                `;
+            }
+        }
+
+        // Auto-test backend on page load
+        window.addEventListener('load', () => {
+            setTimeout(testBackend, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "name": "adobe-stock-analyzer",
+  "version": "1.0.0",
+  "description": "Complete Adobe Stock contributor analyzer with Chrome Extension, Node.js backend, and Python analysis",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "cd server && npm start",
+    "dev": "cd server && npm run dev",
+    "install-server": "cd server && npm install",
+    "install-python": "cd server && pip install -r requirements.txt",
+    "setup": "npm run install-server && npm run install-python",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "adobe-stock",
+    "analyzer",
+    "chrome-extension",
+    "puppeteer",
+    "python",
+    "analytics",
+    "scraping",
+    "railway"
+  ],
+  "author": "Adobe Stock Analyzer Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/adobe-stock-analyzer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/adobe-stock-analyzer/issues"
+  },
+  "homepage": "https://github.com/your-username/adobe-stock-analyzer#readme"
+}
